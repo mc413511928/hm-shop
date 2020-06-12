@@ -1,0 +1,83 @@
+<style lang="less">
+</style>
+
+<script>
+import wepy from 'wepy';
+import 'wepy-async-function';
+import '@/baseApi';
+
+export default class extends wepy.app {
+  config = {
+    pages: [
+      'pages/tabs/home',
+      'pages/tabs/cates',
+      'pages/tabs/cart',
+      'pages/tabs/search',
+      'pages/tabs/my',
+      'pages/goods_detail/main',
+      'pages/goods_list'
+    ],
+    window: {
+      backgroundTextStyle: 'dark',
+      navigationBarBackgroundColor: '#de1e06',
+      navigationBarTitleText: '黑马优购',
+      navigationBarTextStyle: 'white'
+    },
+    tabBar: {
+      list: [
+        {
+          pagePath: 'pages/tabs/home',
+          text: '首页',
+          iconPath: '/assets/icons/home.png',
+          selectedIconPath: '/assets/icons/home-active.png'
+        },
+        {
+          pagePath: 'pages/tabs/cates',
+          text: '分类',
+          iconPath: '/assets/icons/cates.png',
+          selectedIconPath: '/assets/icons/cates-active.png'
+        },
+        {
+          pagePath: 'pages/tabs/cart',
+          text: '商品',
+          iconPath: '/assets/icons/cart.png',
+          selectedIconPath: '/assets/icons/cart-active.png'
+        },
+
+        {
+          pagePath: 'pages/tabs/search',
+          text: '搜索',
+          iconPath: '/assets/icons/search.png',
+          selectedIconPath: '/assets/icons/search-active.png'
+        },
+        {
+          pagePath: 'pages/tabs/my',
+          text: '我',
+          iconPath: '/assets/icons/my.png',
+          selectedIconPath: '/assets/icons/my-active.png'
+        }
+      ]
+    },
+
+    usingComponents: {
+      // 徽章组件
+      'van-badge': './vendor/vant/badge/index',
+      'van-badge-group': './vendor/vant/badge-group/index',
+      'van-row': './vendor/vant/row/index',
+      'van-col': './vendor/vant/col/index'
+    }
+  };
+
+  globalData = {
+    userInfo: null
+  };
+
+  constructor() {
+    super();
+    this.use('requestfix');
+    this.use('promisify');
+  }
+
+  onLaunch() {}
+}
+</script>
