@@ -37,18 +37,18 @@ export default class extends wepy.app {
           iconPath: '/assets/icons/cates.png',
           selectedIconPath: '/assets/icons/cates-active.png'
         },
-        {
-          pagePath: 'pages/tabs/cart',
-          text: '商品',
-          iconPath: '/assets/icons/cart.png',
-          selectedIconPath: '/assets/icons/cart-active.png'
-        },
 
         {
           pagePath: 'pages/tabs/search',
           text: '搜索',
           iconPath: '/assets/icons/search.png',
           selectedIconPath: '/assets/icons/search-active.png'
+        },
+        {
+          pagePath: 'pages/tabs/cart',
+          text: '商品',
+          iconPath: '/assets/icons/cart.png',
+          selectedIconPath: '/assets/icons/cart-active.png'
         },
         {
           pagePath: 'pages/tabs/my',
@@ -64,7 +64,13 @@ export default class extends wepy.app {
       'van-badge': './vendor/vant/badge/index',
       'van-badge-group': './vendor/vant/badge-group/index',
       'van-row': './vendor/vant/row/index',
-      'van-col': './vendor/vant/col/index'
+      'van-col': './vendor/vant/col/index',
+      'van-search': './vendor/vant/search/index',
+      'van-cell': './vendor/vant/cell/index',
+      'van-cell-group': './vendor/vant/cell-group/index',
+      'van-icon': './vendor/vant/icon/index',
+        "van-tag": "./vendor/vant/tag/index",
+       "van-card": "./vendor/vant/card/index"
     }
   };
 

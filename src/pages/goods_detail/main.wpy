@@ -1,13 +1,30 @@
 <template>
-   <view>商品详情页</view>
+   <view>
+      <swiper indicator-dots circular>
+  <block wx:for="{{goodsDetail.pics}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item.pics_big}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+   </view>
 </template>
 <script>
 import wepy from 'wepy';
+import mix from '@/mixins/goods_detail/main';
 export default class extends wepy.page{
+    mixins = [mix];
   
 }
  
 </script>
 <style lang="less">
+swiper {
+  height: 750rpx;
+  image {
+  
+    height: 100%;
+  }
+}
 </style>
 

@@ -16,7 +16,7 @@ export default class extends wepy.mixin{
      
       
       goGoodsList(url){
-        console.log('123');
+       
         wepy.navigateTo({
           url
         })
@@ -55,7 +55,7 @@ export default class extends wepy.mixin{
     const { data: res } = await wepy.get(
       '/home/floordata'
     )
-    console.log(res);
+
     
      if (res.meta.status === 200) {
       this.floorData = res.message;
